@@ -6,7 +6,14 @@
         <div>
             <h1><a href="/">Django Girls tutorial</a></h1>
         </div>
-        <div>
+            {% for post in posts%}
+                <div>
+                    <p>published: {{post.published_date}}</p>
+                    <h2><a href="">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+                {% endfor %}
+   <!--     <div>
             <p>published in: 14/12/2019, 12:14</p>
             <h2><a href="">my first post</a></h2>
             <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
@@ -17,5 +24,6 @@
                 <h2><a href="">my second post</a></h2>
                 <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
             </div>
+   -->
     </body>
 </html>    
